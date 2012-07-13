@@ -1,0 +1,16 @@
+<doctype html>
+<html>
+<head>
+<title>A Picture A Day</title>
+</head>
+<body>
+{% for file in files %}
+    <span class="entry">
+        <img src="{{file}}" />
+        Details: <p>{{meta[file][0].strftime("%d. %m %Y")}}</p>
+        <p>{{meta[file][1]}}</p>
+    </span>
+{% endfor %}
+</body>
+</html>
+
